@@ -131,11 +131,10 @@ export default function DailyInputForm({ onSave }: Props) {
               <button
                 key={d}
                 onClick={() => setDiet(d)}
-                className={`px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 border ${
-                  diet === d
-                    ? 'bg-emerald-450/20 border-emerald-450/50 text-emerald-350'
-                    : 'bg-white/5 border-white/10 text-slate-400 hover:bg-white/10 hover:text-slate-200'
-                }`}
+                className={`px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 border ${diet === d
+                  ? 'bg-emerald-450/20 border-emerald-450/50 text-emerald-350'
+                  : 'bg-white/5 border-white/10 text-slate-400 hover:bg-white/10 hover:text-slate-200'
+                  }`}
               >
                 {d === 'non-veg' ? 'Non-Veg' : d.charAt(0).toUpperCase() + d.slice(1)}
               </button>
@@ -157,9 +156,8 @@ export default function DailyInputForm({ onSave }: Props) {
             key={totalCo2}
             initial={{ scale: 1.2 }}
             animate={{ scale: 1 }}
-            className={`text-2xl font-bold ${
-              totalCo2 < 5 ? 'text-emerald-350' : totalCo2 < 10 ? 'text-amber-400' : 'text-rose-400'
-            }`}
+            className={`text-2xl font-bold ${totalCo2 < 5 ? 'text-emerald-350' : totalCo2 < 10 ? 'text-amber-400' : 'text-rose-400'
+              }`}
           >
             {totalCo2.toFixed(2)} kg CO₂
           </motion.span>
@@ -191,10 +189,10 @@ export default function DailyInputForm({ onSave }: Props) {
         <button
           onClick={handleSave}
           disabled={commuteNum === 0 && electricityNum === 0}
-          className="btn-primary w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          aria-label="Save carbon footprint data" // Ye line add karni hai
+          className="... (aapki existing classes)"
         >
-          <Save className="w-4 h-4" />
-          Save Entry
+          Save
         </button>
       </div>
 
