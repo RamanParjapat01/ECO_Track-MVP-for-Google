@@ -1,7 +1,7 @@
 /** @vitest-environment jsdom */
 import { render } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import DoomsdayChart from './components/DoomsdayChart';
+import DoomsdayChart from '../components/DoomsdayChart';
 
 describe('DoomsdayChart Component', () => {
     it('renders without crashing', () => {
